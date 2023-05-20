@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Xaero_EF.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var sqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AppDbContext>(option =>
+ option.UseSqlServer(connectionString: sqlConnection)
+) ;
 
 var app = builder.Build();
 
