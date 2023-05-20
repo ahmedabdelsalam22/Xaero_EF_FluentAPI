@@ -1,6 +1,4 @@
-﻿using Microsoft.Build.Framework;
 using System.ComponentModel.DataAnnotations;
-using RequiredAttribute = Microsoft.Build.Framework.RequiredAttribute;
 
 namespace EF_Core.Models
 {
