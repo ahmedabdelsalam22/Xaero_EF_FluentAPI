@@ -7,6 +7,7 @@ var sqlConnection = builder.Configuration.GetConnectionString("DefaultConnection
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AppDbContext>(option =>
  option.UseSqlServer(connectionString: sqlConnection)
