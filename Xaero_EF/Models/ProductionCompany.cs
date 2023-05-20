@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EF_Core.Models
 {
@@ -9,7 +9,7 @@ namespace EF_Core.Models
         public string Logo { get; set; }
         
         public decimal AnnualReveune { get; set; }
-        public string EstablishmentDate { get; set; }
+        public DateTime EstablishmentDate { get; set; }
 
         public ICollection<Movie> Movies { get; set; }
     }
